@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Tỏ Tình</title>
+    <style>
+        /* Thiết lập chung */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        /* Hộp thiệp */
+        .card {
+            position: relative;
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .card h1 {
+            color: #ff6b81;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Nút Đồng ý */
+        .button-yes {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff6b81;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        .button-yes:hover {
+            background-color: #ff4a6e;
+        }
+
+        /* Nút Không (sẽ di chuyển khi người ấy cố nhấn vào) */
+        .button-no {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #666;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            transition: all 0.3s ease;
+            top: 70%;
+            left: 60%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Thiệp tỏ tình -->
+    <div class="card">
+        <h1>Gửi đến người người con gái em thương ❤️</h1>
+        <p class="message">"Em nghĩ là lúc mới đầu gặp chị em không có một chút thiện cảm gì về chị về ngoại hình hay tính cách lúc đấy em chỉ nghĩ đó chỉ là một mối quan hệ bạn bè rất đỗi bth nhưng có lẽ đó là do não của e đang đi theo một chiều hướng khác hoàn toàn với con tim em sau khi tiếp xúc với chị nhiều hơn qua văn nghệ cuộc sống con tim em đã có gì đó rung cảm ới chị tù có thiện cảm rồi đến thích thích và giờ là tình cảm chân thnhf nhất của em dành cho chị vậy đó nếu chị cũng giống như em thì hãy cho nhau 1 cơ hội bước xa hơn trong mối quan hệ bạn bè đc ko ạ em yêu chị. Chị đôngf ý làm người yêu em nha "</p>
+        <!-- Nút Đồng ý -->
+        <button class="button-yes">Có ❤️</button>
+        <!-- Nút Không sẽ di chuyển -->
+        <button class="button-no" onmouseover="moveNoButton()">Không 😅</button>
+    </div>
+
+    <script>
+        // Hàm di chuyển nút "Không" mỗi khi người ấy di chuột vào
+        function moveNoButton() {
+            const buttonNo = document.querySelector('.button-no');
+            // Tạo vị trí ngẫu nhiên mới cho nút "Không"
+            const newTop = Math.random() * 80 + '%';
+            const newLeft = Math.random() * 80 + '%';
+            buttonNo.style.top = newTop;
+            buttonNo.style.left = newLeft;
+        }
+    </script>
+</body>
+</html>
+
